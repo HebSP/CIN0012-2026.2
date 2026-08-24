@@ -9,7 +9,7 @@ module tb_mux32b4x1;
 
    logic [31:0] values [0:3];
 
-   mux4x1 dut(
+   mux32b4x1 dut(
       .f(muxOut),
       .a(a),
       .b(b),
