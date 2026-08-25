@@ -6,8 +6,10 @@ lw x23, j
 
 beq, x22,x23, iigualj
 sub x19, x20, x21
+beq x0, x0, fimse
 iigualj:
 add x19, x20, x21
+fimse:
 sw x19, f
 halt
 
