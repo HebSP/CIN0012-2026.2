@@ -1,11 +1,14 @@
-addi x20, x0, 12
-add x21, x0, x0
+addi x5, x0, 28
+
 loop:
-lb x10, 24(x21) 
-sb x10, 1024(x0)
-addi x21, x21, 1
-bne x21, x20, loop
+    lb x10, 0(x5)
+    beq x10, x0, fim
+    sb x10, 1024(x0)
+    addi x5, x5, 1
+    jal x0, loop
 
-halt
-str1: .string "Hello World"
+fim:
+    halt
 
+str1:
+    .string "Hello World"
